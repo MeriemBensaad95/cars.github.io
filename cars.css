@@ -1,0 +1,807 @@
+
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+*{
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    font-family: 'Cairo', sans-serif;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+.home{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/img/s/2015_lexus_rc_f_orange-wide.jpg);
+    background-position: center;
+    background-size:cover;
+    position: relative;
+    
+}
+
+.menu-bar{
+   
+    background-color:transparent;
+    box-shadow: 10px 0px 10px #e6e6e6 ;
+    text-align: right;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+   
+      
+       
+}
+
+
+
+
+.menu-bar ul{
+    display:inline-flex;
+    
+    list-style: none;
+    color: white;
+    font-size: 18px;
+    
+    
+
+}
+.menu-bar ul li{
+    width: max-content;
+    height: max-content;
+    margin: 0px;
+    padding: 8px;
+}
+   .list2 button {
+        text-decoration: none;
+        color: white;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        background: transparent;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+       
+        
+        
+    }
+ .list2   button:hover{
+       /* background: rgba(0, 0, 0, 0.432);
+        border: 1px solid rgba(0, 0, 0, 0.432);
+        */
+        color: white;
+        transition: 1s;  
+    }
+    .list2 button::after{
+        content:'';
+        background: white;
+        width: 0%;
+        height: 1px;
+        display: flex;
+        margin: auto;
+        transition: 0.5s;  
+    }
+    .list2 button:hover::after{
+        width: 100%;
+        transition: 0.5s;
+    }
+   
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+   
+}
+
+
+ .menu-bar ul li::after {
+    content:'';
+    background: white;
+    width: 0%;
+    height: 1px;
+    display: flex;
+    margin: auto;
+    transition: 0.5s;
+
+}
+
+
+
+
+
+ .navbar ul li:hover::after{
+width: 100%;
+}
+
+.navbar .sub-1{
+    display: none;
+    text-align: left;
+}
+.navbar ul li:hover .sub-1{
+    display: flex;
+    position:absolute;
+   /* background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 6px 5px rgba(0,0,0,0.7);*/
+    
+    
+}
+
+.navbar ul li:hover .sub-1 ul{
+    display: flex;
+    margin: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    align-items: center;
+}
+.text h2{
+    left: 23%;
+    font-size: 50px;
+   text-align: center;
+    position: relative;
+    color: #111;
+    text-transform: uppercase;
+
+}
+.text h2::before{
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid white;
+    text-shadow: 10px 0px 10px white;
+    animation: animate 7s linear infinite;
+}
+@keyframes animate {
+    0%, 10%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 75%;
+    }
+}
+.text h5{
+    font-size:30px;
+    font-weight:200;
+    color: white;
+    position: relative;
+    margin: auto;
+    
+    
+
+}
+.text p{
+    background-image: url(/img/s/2015_lexus_rc_f_orange-wide\ -\ Copie.jpg);
+    background-position:bottom;
+    background-size:cover;
+    position: relative;
+    margin: auto;
+    color: black;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px 1px grey;
+    border-radius: 5px;
+    width: 100%;
+    
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    font-size: 18px;
+}
+.text p a{
+    color :rgba(255, 81, 0, 0.918);
+    font-weight: bold;
+    text-decoration: solid;
+    
+}
+
+.browse{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top:60px ;
+    transition: 0.5s;
+}
+.navbar ul li .brn{
+    
+    transition: 0.5s;
+}
+.navbar ul li .ctm{
+    transition: 0.5s;
+}
+.browse h1{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 25px;
+    margin: auto;
+}
+.browse .brand table{
+   text-align: center;
+   margin: auto;
+   
+   
+}
+.browse .brand table tr td{
+    padding: 20px;
+    cursor: pointer;
+   
+}
+.browse .brand table tr td a{
+display: block;
+font-size: 16px;
+font-weight: bolder;
+ 
+}
+/*.search {
+    align-items: center;
+    display: inline-block;
+    justify-content: space-between;
+    
+}
+/*
+.dropdown{
+    min-width: 15em;
+    position:fixed;
+    margin: 2em;
+    box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+}
+
+.select{
+    background-color: #2a2f2a;
+    columns: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f2a solid;
+    border: 1px;
+    padding: 1em;
+    cursor: pointer;}
+    
+
+.select-clicked{
+    border: 2 px #26489a solid;
+    box-shadow:  0 0 0.8em #26489a;
+}
+
+.select  hover{
+background: #323741;
+}
+.caret{
+    width: 0;
+    height: 0;
+    border-left:  5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+.caret-rotate {
+    transform: rotate(180deg);
+}
+.menu{
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+    color: #3fa5b5;
+    position: absolute;
+}
+/*
+.container{
+    padding: 20px;
+    width: 200pxs;
+    position: relative;
+}
+.click{
+    background-color: blue;
+}
+.click:hover{
+    background-color: blueviolet;
+}
+.click,.links{
+    padding: 12px;
+    font-size: 12px;
+    border: none;
+    outline:none;
+}*/
+.search{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    padding-top:60px ;
+    padding: 40px;
+    
+}
+.brand label{
+
+    
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color:black; 
+    padding: 10px;
+    
+}
+ 
+
+.search h1{
+    margin: auto;
+}
+  
+.search h1 a{
+    box-sizing: border-box;
+    border-radius: 500px;
+    color: black;
+    padding: 20px;
+    font-size:30px;
+    font-weight:bold;
+    box-sizing: border-box;
+    border: transparent;
+    margin-bottom: 50px;
+    margin: auto;
+    
+    text-decoration: none;
+}
+.search h1 :hover{
+    background-color:rgba(190, 64, 6, 0.918);
+    color: wheat;
+    
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.dropdown{
+    /*height: 900px;*/
+    padding: 20px;
+
+}
+.dropdown ul{
+    list-style: none;
+    background-color:transparent;
+    height: fit-content;
+    
+}
+.dropdown ul li{
+    display: inline-block;
+position: relative;
+
+}
+.dropdown ul li a{
+    display: block;
+    padding: 20px 25px;
+
+    color:blue;
+   
+    text-decoration: none;
+text-align: center;
+font-size: 20px;
+}
+.dropdown ul li ul.drop li{
+    display: block;
+    width: fit-content;
+}
+.dropdown ul li ul.drop{
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 10px 0px 10px #e6e6e6 ;
+    position: absolute;
+    z-index: 999;
+    display: none;
+
+}
+.dropdown ul li a:hover{
+    box-shadow: 10px 0px 10px rgba(255, 81, 0, 0.918) ;
+    border-radius: 20px;
+    background-color: transparent;
+    width: fit-content;
+}
+.dropdown ul li:hover ul.drop
+{display: block;
+    width: fit-content;}
+
+
+     .searchbar{
+    
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+       
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/img/s/orange_nissan_350z-wide.jpg);
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        align-items: left;
+        padding: 20px;
+        box-shadow: var(--shadow-5)
+    }
+    select {
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        -ms-appearance:none;
+        appearance:none;
+        outline:0;
+        box-shadow:none;
+        border:0!important;
+        background: wheat;
+        
+        flex: 1;
+        padding: 0 10px;
+        color:rgba(190, 64, 6, 0.918);
+        cursor:pointer;
+        font-size: 1em;
+        /*box-shadow: 5px 20px 5px 5px #5c6664;
+       */
+     }
+     select::-ms-expand {
+        display: none;
+     }
+     .select {
+
+        position: relative;
+        margin-left: 40.5%;
+        display: flex;
+        margin-bottom: 18px;
+        
+        width: 15em;
+        height: 3em;
+        line-height: 3;
+        background: rgba(190, 64, 6, 0.918);
+        overflow: hidden;
+        border-radius: .25em;
+        box-shadow: 5px 0px 5px 0px rgba(190, 64, 6, 0.918);
+     }
+     .select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 1em;
+        background: wheat;
+        cursor:pointer;
+        pointer-events:none;
+        transition:.25s all ease;
+     }
+     .select:hover::after {
+        color: rgba(190, 64, 6, 0.918);
+     }
+    
+     #submit{
+        cursor: pointer;
+        display: flex;
+        
+       width: fit-content;
+        
+        
+        font-weight: bold;
+        padding: 10px;
+        margin-left: 20px;
+        border-radius: 18px;
+        
+        margin: auto;
+        color: wheat;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        letter-spacing: 4px;
+        border: 1px solid rgba(190, 64, 6, 0.918);
+        
+        }
+    #submit:hover{
+        background: rgba(190, 64, 6, 0.918);
+        color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 0 5px rgba(255, 81, 0, 0.918),0 0 25px rgba(255, 81, 0, 0.918),0 0 50px rgba(255, 81, 0, 0.918), 0 0 100px rgba(255, 81, 0, 0.918);
+        }
+
+
+        #button{
+            cursor: pointer;
+        display: inline;
+        
+       width: fit-content;
+        
+        
+        font-weight: bold;
+        
+        
+        border-radius: 20px;
+            padding: 10px 20px;
+            color: wheat;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            letter-spacing: 4px;
+            border: 1px solid rgba(190, 64, 6, 0.918);
+           
+            }
+        #button:hover{
+            background: rgba(190, 64, 6, 0.918);
+            color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 0 5px rgba(255, 81, 0, 0.918),0 0 25px rgba(255, 81, 0, 0.918),0 0 50px rgba(255, 81, 0, 0.918), 0 0 100px rgba(255, 81, 0, 0.918);
+            }
+    
+        .searchbar h2{
+            color: wheat;
+                padding: 20px;
+                text-shadow: 2px 3px 3px rgba(190, 64, 6, 0.918);
+            }
+
+ .searchbar form{
+    top: 50%; 
+    left: 50%; 
+    position: relative;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 200px; ;
+   color: rgba(190, 64, 6, 0.918);
+   font-weight: bold;
+    background: white;
+    box-sizing: border-box;
+    border: 4px solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    
+    box-shadow: 0 0 10px rgba(190, 64, 6, 0.918);
+    }
+    .searchbar  input :type[search]{
+        position: absolute;
+        top:0;
+        left: 50%;
+        width: 100%;
+        height: 42.5px;
+        line-height: 30px;
+        outline: 0;
+        border: transparent;
+        display: none;
+        font-size: 1em;
+        border-radius: 20px;
+        padding:0;
+        color: #111;
+    }
+    .fa{
+        position: absolute;
+        top:0;
+        right: 0;
+        width: 42.5px;
+        height: 42.5px;
+        font-size: 1em;
+        border-radius: 50%;
+        padding: 10px;
+        color: #ae4b4b;
+        text-align: center;
+        transition: all 1s;
+    }
+   
+
+
+/*Scroll*/
+
+.media-scroller {
+    
+  --_spacer: var(--size-3);
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+
+  padding: 0 var(--_spacer) var(--_spacer);
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+
+.media-element {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--size-2);
+  padding: var(--size-2);
+  background: var(--surface-2);
+  background: var(--gradient-19);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-6);
+  margin-top: var(--size-1);
+  margin-bottom: 50px;
+  
+}
+
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+ border-radius: 5px;
+	height: 120%;
+	display: block;
+	transition: all 0.5s ease;
+  
+  
+}
+.media-element> img:hover{
+    color: #ffffff;
+	padding-left: 8px;
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+  margin-bottom: 50px;
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+/* general styling */
+
+.containers {
+  inline-size: min(100% - 4rem, 70rem);
+  margin-inline: auto;
+}
+
+.flow {
+  display: grid;
+  gap: var(--size-3);
+}
+
+.page-header {
+    padding-block: var(--size-5);
+    margin-block-end: var(--size-10);
+margin-top: var(--size-9);
+  background: white; /*var(--gradient-19);*/
+  
+  box-shadow: var(--shadow-6);
+}
+
+.page-title {
+    text-decoration: none;
+  font-size: 30px;
+  text-shadow: 1px 1px 0 rgb(124, 127, 139);
+  color: black;
+  padding: 20px;
+  margin: auto;
+  
+  
+  text-align: center;
+ 
+ 
+}
+/*
+
+.page-subtitle {
+    text-shadow: 1px 1px 0 gray;
+  font-size: var(--font-size-fluid-1);
+  font-weight: bold;}*/
+  
+
+.media-element p {
+    padding-inline-start: var(--size-5);
+  margin-block:var(--size-7)  var(--size-3);
+  color: rgb(0, 6, 27);
+  text-align: left;
+ font-weight: 400;
+  
+}
+
+
+
+footer .container{
+    box-sizing: border-box;
+    border: 1px solid grey;
+    background-color: #24262b;    background-size: cover;
+    background-position:center ;
+    width: 100%;
+    
+    padding: 70px 0;
+}
+.row{
+
+
+    display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: rgba(190, 64, 6, 0.918);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+    padding-top: 10px;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: rgba(190, 64, 6, 0.918);
+	background-color: wheat;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+
+
